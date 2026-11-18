@@ -9,6 +9,7 @@ The catalog is organized from foundational architecture and runtimes through int
 ## Contents
 
 - [Enterprise Architecture](#enterprise-architecture)
+- [Open Source and Proprietary Technologies](#open-source-and-proprietary-technologies)
 - [Languages and Runtimes](#languages-and-runtimes)
 - [Java and Jakarta Enterprise](#java-and-jakarta-enterprise)
 - [Enterprise Frameworks](#enterprise-frameworks)
@@ -29,6 +30,42 @@ The catalog is organized from foundational architecture and runtimes through int
 - [Enterprise Networking and Storage](#enterprise-networking-and-storage)
 - [Specialized Enterprise Software](#specialized-enterprise-software)
 - [Books and Reference Material](#books-and-reference-material)
+
+## Open Source and Proprietary Technologies
+
+Enterprise technology is not divided into only “free” and “paid.” The following classifications are useful when evaluating a platform:
+
+- **Open source** — source code is available under an OSI-approved or otherwise recognized open-source license, such as Apache-2.0, MIT, BSD, GPL, LGPL, EPL, MPL, or AGPL.
+- **Source available / fair-code** — source is visible, but the license restricts commercial use, hosted competition, redistribution, or modification. Do not describe these projects as open source without checking the license.
+- **Commercial proprietary** — source and modification rights are controlled by a vendor and use is governed by a commercial agreement, subscription, license key, or support contract.
+- **Open-core** — a community edition is open source while enterprise capabilities, support, governance, or security features are proprietary.
+- **Managed service** — the underlying technology may be open source, but the hosted control plane, data processing, SLA, support, and terms are proprietary to the cloud provider.
+- **Standards** — specifications such as HTTP, SQL, OAuth, ISO 20022, HL7 FHIR, and FIX are not software licenses; implementations can be open source or proprietary.
+
+### Open-source enterprise foundations
+
+- **Operating systems and foundations** — Linux, FreeBSD, OpenBSD, illumos, Debian, Ubuntu, Rocky Linux, AlmaLinux, Fedora, SUSE Linux Enterprise source components, Apache Software Foundation, Eclipse Foundation, Linux Foundation, CNCF, GNU, and the Open Group.
+- **Open-source runtimes and languages** — OpenJDK, Eclipse Temurin, .NET, Mono, Kotlin, Scala, Python, Go, Rust, PHP, Ruby, PostgreSQL, MariaDB, and GCC/LLVM.
+- **Open-source enterprise infrastructure** — Kubernetes, OpenShift community components, OpenStack, Cloud Foundry, Podman, containerd, CRI-O, Ansible, Terraform, OpenTofu, Ceph, MinIO, Proxmox VE, and Apache CloudStack.
+- **Open-source application and data platforms** — Apache Kafka, Pulsar, Flink, Spark, Airflow, Camel, Tomcat, WildFly, Open Liberty, PostgreSQL, MySQL, MariaDB, Cassandra, CouchDB, MongoDB Community Server, Redis forks, OpenSearch, Solr, Trino, Iceberg, and Superset.
+- **Open-source security and operations** — Keycloak, OpenBao, Open Policy Agent, Falco, Wazuh, Suricata, Zeek, OpenSCAP, OpenTelemetry, Prometheus, Grafana, Jaeger, Fluent Bit, Vault forks, and OSQuery.
+- **Open-source business software** — Odoo Community, ERPNext, Apache OFBiz, Dolibarr, SuiteCRM, Nextcloud, Mattermost, Taiga, OpenProject, Alfresco Community, Liferay Community, and OpenKM.
+
+### Commercial and proprietary enterprise ecosystems
+
+- **IBM** — z/OS, CICS, IMS, Db2, WebSphere, MQ, Sterling, watsonx, Cognos, FileNet, Rational, Maximo, and SPSS.
+- **Oracle** — Oracle Database, WebLogic, Java SE licensing/support, Exadata, OCI, Fusion Applications, NetSuite, FLEXCUBE, and MySQL commercial offerings.
+- **Microsoft** — Windows Server, SQL Server, .NET commercial support, Azure, Entra ID, Dynamics 365, Power Platform, SharePoint, Teams, and System Center.
+- **SAP** — S/4HANA, HANA, Business Technology Platform, SuccessFactors, Ariba, Concur, BusinessObjects, and integration products.
+- **Salesforce** — Sales Cloud, Service Cloud, Marketing Cloud, Data Cloud, MuleSoft, Tableau, Slack, and the Salesforce Platform.
+- **Enterprise infrastructure vendors** — VMware/Broadcom, Nutanix, Red Hat subscriptions, SUSE, Canonical Ubuntu Pro, Dell, HPE, Cisco, NetApp, Pure Storage, F5, Palo Alto Networks, Fortinet, and Check Point.
+- **Cloud providers** — AWS, Microsoft Azure, Google Cloud, Oracle Cloud, IBM Cloud, Alibaba Cloud, and SAP Cloud. Their managed services are proprietary even when based on open-source projects.
+- **Enterprise application vendors** — ServiceNow, Workday, Pega, Appian, Guidewire, Duck Creek, Temenos, Finastra, FIS, Epic, Oracle Health, Siemens, Dassault Systèmes, PTC, Infor, and Blue Yonder.
+- **Commercial developer and security platforms** — GitHub Enterprise, GitLab subscriptions, Atlassian Data Center, JetBrains, JFrog, Sonatype, Snyk, Veracode, Checkmarx, Fortify, Dynatrace, Splunk, Datadog, New Relic, and Cloudflare.
+
+### How to evaluate ownership
+
+For every entry in this catalog, verify the exact edition and deployment model: community versus enterprise, self-hosted versus SaaS, upstream versus vendor fork, license version, support lifecycle, feature gates, data residency, export controls, and the rights to modify, redistribute, or run the software at scale. A vendor may offer an open-source upstream project, a proprietary enterprise distribution, and a separate managed service under different terms.
 
 ## Enterprise Architecture
 
@@ -131,6 +168,23 @@ The catalog is organized from foundational architecture and runtimes through int
 - Informatica, Talend, Pentaho, Apache NiFi, StreamSets, dbt, Trino, Presto, Denodo, and Data Virtualization.
 - Catalog and governance — Collibra, Alation, Apache Atlas, DataHub, OpenMetadata, Great Expectations, and OpenLineage.
 
+### Database depth
+
+- **Analytical and columnar engines** — Snowflake, Teradata, Vertica, Greenplum, ClickHouse, Apache Doris, Apache Druid, DuckDB, MonetDB, SingleStore, and Exasol.
+- **Time-series and telemetry** — InfluxDB, TimescaleDB, VictoriaMetrics, QuestDB, OpenTSDB, Prometheus TSDB, and Amazon Timestream.
+- **Graph databases** — Neo4j, JanusGraph, TigerGraph, Stardog, MarkLogic, Neptune, ArangoDB, and OrientDB.
+- **Document and key-value systems** — MongoDB, Couchbase, CouchDB, RavenDB, DynamoDB, Cosmos DB, FoundationDB, Riak, Aerospike, RocksDB, and LevelDB.
+- **Distributed SQL/NewSQL** — CockroachDB, YugabyteDB, TiDB, Google Spanner, Azure Cosmos DB for PostgreSQL, Vitess, and SingleStore.
+- **Data virtualization and federation** — Trino, Presto, Denodo, Dremio, Starburst, Teiid, PolyBase, Foreign Data Wrappers, and database links.
+- **Replication and change data capture** — Debezium, Kafka Connect, Oracle GoldenGate, IBM InfoSphere CDC, Qlik Replicate, AWS DMS, Striim, HVR, SymmetricDS, and native log shipping.
+- **High availability and disaster recovery** — Oracle Data Guard/RAC, SQL Server Always On, Db2 HADR, PostgreSQL Patroni, repmgr, pg_auto_failover, MySQL InnoDB Cluster, MariaDB Galera, Percona XtraDB Cluster, SAP HANA System Replication, and cloud database multi-region replicas.
+- **Database proxies and pools** — PgBouncer, Odyssey, ProxySQL, MariaDB MaxScale, HAProxy, Amazon RDS Proxy, HikariCP, c3p0, and Apache DBCP.
+- **Migration and schema management** — Flyway, Liquibase, Skeema, Sqitch, Alembic, Rails migrations, EF Migrations, Prisma Migrate, ora2pg, AWS SCT, and SQLines.
+- **Backup, restore, and PITR** — RMAN, pgBackRest, WAL-G, Barman, Percona XtraBackup, SQL Server native backup, Db2 backup utilities, Veeam, Commvault, and immutable backup vaults.
+- **Database observability** — Oracle AWR/ASH, SQL Server Query Store, pg_stat_statements, Performance Schema, Db2 MON_GET, SAP HANA Cockpit, pganalyze, SolarWinds DPA, and Percona Monitoring and Management.
+- **Database security** — transparent data encryption, column-level encryption, row-level security, dynamic data masking, Oracle VPD, SQL Server Always Encrypted, PostgreSQL RLS, Database Activity Monitoring, privileged access management, and separation of duties.
+- **Data quality and lifecycle** — master data management, reference data management, deduplication, survivorship, data contracts, archival, tiering, retention, deletion workflows, masking, tokenization, synthetic data, and test-data management.
+
 ## Cloud and Hybrid Infrastructure
 
 - **Cloud providers** — AWS, Microsoft Azure, Google Cloud, Oracle Cloud Infrastructure, IBM Cloud, Alibaba Cloud, and SAP Business Technology Platform.
@@ -153,6 +207,23 @@ The catalog is organized from foundational architecture and runtimes through int
 - **Secrets and keys** — HashiCorp Vault, CyberArk Conjur, AWS KMS/Secrets Manager, Azure Key Vault, Google Cloud KMS/Secret Manager, and HSMs.
 - **Security tooling** — SAST, DAST, SCA, SBOM, dependency management, vulnerability scanning, SIEM, SOAR, EDR, WAF, PAM, zero trust, and secure software supply chains.
 - **Standards and frameworks** — NIST CSF, NIST SP 800-53, ISO 27001, CIS Controls, OWASP ASVS, OWASP SAMM, PCI DSS, SOC 2, FedRAMP, HIPAA, GDPR, and regional privacy laws.
+
+### Security depth
+
+- **Application security** — threat modeling, secure design review, abuse cases, security requirements, SAST, DAST, IAST, RASP, SCA, secrets scanning, fuzzing, penetration testing, red teaming, and bug bounty programs.
+- **Security platforms** — Microsoft Defender, CrowdStrike, SentinelOne, Palo Alto Cortex, Trellix, Broadcom Symantec, Sophos, Wazuh, OSSEC, Suricata, Zeek, Snort, and Security Onion.
+- **SIEM and SOAR** — Splunk Enterprise Security, Microsoft Sentinel, IBM QRadar, Google Chronicle, Sumo Logic, Elastic Security, LogRhythm, Exabeam, Cortex XSOAR, and Swimlane.
+- **IAM governance** — identity governance and administration (IGA), access reviews, joiner-mover-leaver workflows, entitlement management, role mining, RBAC, ABAC, PBAC, just-in-time access, privileged session management, and segregation of duties.
+- **Privileged access** — CyberArk PAM, BeyondTrust, Delinea, Wallix, HashiCorp Boundary, Teleport, StrongDM, sudo, Linux PAM, Windows LAPS, and bastion hosts.
+- **PKI and cryptography** — OpenSSL, BoringSSL, LibreSSL, Java JCA/JCE, .NET cryptography, Smallstep, EJBCA, Microsoft AD CS, Venafi, DigiCert, Entrust, Thales, HSMs, certificate transparency, OCSP, CRL, KMS, and key ceremonies.
+- **Cloud and workload security** — Wiz, Orca Security, Prisma Cloud, Lacework, Aqua, Sysdig, Snyk, Trivy, Falco, Kyverno, Gatekeeper, Cloud Custodian, AWS Security Hub, Microsoft Defender for Cloud, and Google Security Command Center.
+- **Network and application edge** — WAF, API security, bot management, DDoS protection, secure web gateways, CASB, SASE, ZTNA, DLP, DNS filtering, NAC, IDS/IPS, VPN, and microsegmentation.
+- **Supply-chain security** — SLSA, in-toto, Sigstore, Cosign, Rekor, TUF, Notary, SPDX, CycloneDX, Syft, Grype, Dependency-Track, GUAC, provenance attestations, reproducible builds, and signed artifacts.
+- **Privacy and data protection** — data classification, DLP, consent management, purpose limitation, data minimization, PII discovery, privacy-enhancing technologies, differential privacy, confidential computing, pseudonymization, and right-to-erasure workflows.
+- **Incident response and forensics** — NIST 800-61, MITRE ATT&CK, Cyber Kill Chain, MISP, TheHive, Cortex, Velociraptor, GRR, Volatility, Autopsy, FTK, EnCase, chain of custody, tabletop exercises, and breach notification.
+- **Security testing and assurance** — CIS Benchmarks, OpenSCAP, Lynis, Nmap, Burp Suite, Metasploit, Kali Linux, Nessus, Qualys, Rapid7 InsightVM, OpenVAS/Greenbone, Cobalt Strike, and compliance evidence automation.
+- **Hardware and physical security** — TPM, Secure Boot, measured boot, confidential VMs, HSMs, smart cards, PIV/CAC, biometric systems, data-center access control, media sanitization, and tamper-evident logging.
+- **Operational security** — vulnerability disclosure, patch SLAs, security baselines, exception management, security champions, crisis communications, third-party security risk, tabletop exercises, and business continuity.
 
 ## Observability and Operations
 
